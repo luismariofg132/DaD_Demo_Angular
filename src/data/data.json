@@ -1,0 +1,32 @@
+{
+    "estados": [
+        {
+            "id": "1",
+            "name": "Inicial"
+        },
+        {
+            "id": "2",
+            "name": "En proceso"
+        },
+        {
+            "id": "3",
+            "name": "En espera"
+        },
+        {
+            "id": "4",
+            "name": "En revisión"
+        },
+        {
+            "id": "5",
+            "name": "En desarrollo"
+        },
+        {
+            "id": "6",
+            "name": "En pruebas"
+        },
+        {
+            "id": "7",
+            "name": "Finalizado"
+        }
+    ]
+}

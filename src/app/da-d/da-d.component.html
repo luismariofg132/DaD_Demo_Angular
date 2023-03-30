@@ -1,0 +1,46 @@
+<div class="container-full-size">
+    <div class="atributos">
+        <div class="atributos-header">
+            <h2>Atributos</h2>
+        </div>
+        <div class="atributos-body">
+            <div cdkDropList #doneAtributos="cdkDropList" class="example-list" (cdkDropListDropped)="drop2($event)"
+                [cdkDropListData]="atributos" [cdkDropListConnectedTo]="[doneReportes]">
+                <div class="example-box" *ngFor="let item of atributos" cdkDrag>{{item}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="tabla">
+        <div class="reporte">
+            <div class="reportes-header">
+                <h2>Reportes</h2>
+            </div>
+            <div class="reportes-body" cdkDropList cdkDropListOrientation="horizontal"
+                (cdkDropListSorted)="dropEntered($event)" (cdkDropListDropped)="drop2($event)"
+                #doneReportes="cdkDropList" [cdkDropListData]="tbodyPrevisualization"
+                [cdkDropListConnectedTo]="[doneAtributos]" cdkDragBoundary=".reporte">
+
+                <div class="container-table" *ngFor="let item of tbodyPrevisualization" cdkDrag>
+                    <table class="table-reporte">
+                        <thead>
+                            <tr>
+                                <th>{{item}}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Previsualizacion Dato</td>
+                            </tr>
+                            <Tr>
+                                <td>Previsualizacion Dato</td>
+                            </Tr>
+                            <tr>
+                                <td>Previsualizacion Dato</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
